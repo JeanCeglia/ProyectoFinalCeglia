@@ -12,7 +12,7 @@ export class UI {
       console.log(weather);
       this.location.textContent = weather.name + ' / ' + weather.sys.country;
       this.desc.textContent = weather.weather[0]['description'];
-      this.string.textContent = weather.main.temp + ' °C';
+      this.string.textContent = weather.main.temp + ' K';
       this.humidity.textContent = 'Humidity: ' + weather.main.humidity + '°C';
       this.wind.textContent = 'Weather ' + weather.wind.speed + ' m/s';
     }

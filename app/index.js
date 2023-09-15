@@ -1,6 +1,6 @@
-const { Store } = require('./Store');
-const { Weather } = require('./Weather');
-const { UI } = require('./UI');
+import { Store } from './Store.js';
+import { Weather } from './Weather.js';
+import { UI } from './UI.js';
 
 const storage = new Store();
 const {city, countryCode}= storage.getLocationData();
@@ -9,7 +9,7 @@ const weather = new Weather(city, countryCode);
 // User Interface
 const ui = new UI();
 
-require('./index.css');
+
 
 async function fetchWeather() {
   const data = await weather.getWeather()
